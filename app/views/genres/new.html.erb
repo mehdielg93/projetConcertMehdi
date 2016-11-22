@@ -1,0 +1,9 @@
+<%= form_for :genre, url: genres_path do |f| %>
+	
+	<%= f.label :nom %>
+	<%= f.text_field :nom %>
+
+	<%= f.submit "Créer" %>
+<% end %>
+
+<%= link_to 'Liste des concerts', concerts_path %>

@@ -1,0 +1,103 @@
+<a href="http://localhost:3000/new"> 
+	Creer un Concert ! 
+</a> <br/>
+<a href="http://localhost:3000/genres/new"> 
+	Creer un Genre !
+</a><br/>
+<a href="http://localhost:3000/artistes/new"> 
+	Creer un Artiste !
+</a><br/>
+<a href="http://localhost:3000/seances/new"> 
+	Creer une séance !
+</a><br/>
+<a href="http://localhost:3000/typesplaces/new"> 
+	Creer un Type de places !
+</a><br/>
+<a href="http://localhost:3000/places/new"> 
+	Creer des places !
+</a><br/>
+
+<h1> Concerts </h1>
+<ul>
+  <% @concerts.each do |concert| %>
+    <li>
+		<p><%= concert.inspect %></p>
+  
+		<%= link_to "Show", concert_path(concert) %> <br/> 
+		<%= link_to "Edit", edit_concert_path(concert) %><br/>
+		<%= link_to "Destroy", concert_path(concert),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+	</li>
+  <% end %>
+</ul>
+
+<h1> Genres </h1>
+<ul>
+  <% @genres.each do |genre| %>
+    <li>
+		<p><%= genre.inspect %></p>
+	</li>
+	<%= link_to "Show", genre_path(genre) %> <br/> 
+		<%= link_to "Edit", edit_genre_path(genre) %><br/>
+		<%= link_to "Destroy", genre_path(genre),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+  <% end %>
+</ul>
+
+<h1> Artistes </h1>
+<ul>
+  <% @artistes.each do |artiste| %>
+    <li>
+		<p><%= artiste.inspect %></p>
+	</li>
+		<%= link_to "Show", artiste_path(artiste) %> <br/> 
+		<%= link_to "Edit", edit_artiste_path(artiste) %><br/>
+		<%= link_to "Destroy", artiste_path(artiste),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+  <% end %>
+</ul>
+
+<h1> Typesplaces </h1>
+<ul>
+  <% @typesplaces.each do |typesplace| %>
+    <li>
+		<p><%= typesplace.inspect %></p>
+	</li>
+	<%= link_to "Show", typesplace_path(typesplace) %> <br/> 
+		<%= link_to "Edit", edit_typesplace_path(typesplace) %><br/>
+		<%= link_to "Destroy", typesplace_path(typesplace),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+  <% end %>
+</ul>
+
+<h1> Places </h1>
+<ul>
+  <% @places.each do |place| %>
+    <li>
+		<p><%= place.inspect %></p>
+	</li>
+	<%= link_to "Show", place_path(place) %> <br/> 
+		<%= link_to "Edit", edit_place_path(place) %><br/>
+		<%= link_to "Destroy", place_path(place),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+  <% end %>
+</ul>
+
+<h1> Seances </h1>
+<ul>
+  <% @seances.each do |seance| %>
+    <li>
+		<p><%= seance.inspect %></p>
+	</li>
+	<%= link_to "Show", seance_path(seance) %> <br/> 
+		<%= link_to "Edit", edit_seance_path(seance) %><br/>
+		<%= link_to "Destroy", seance_path(seance),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+  <% end %>
+</ul>
